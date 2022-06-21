@@ -1,0 +1,129 @@
+﻿import java.util.*;
+class book 
+{
+    private author author;
+    private String title;
+    private int noOfPages;
+    private boolean fiction;
+    public book()
+    {
+        
+    }
+    public book(author author, String title, int noOfPages,boolean fiction)
+    {
+        
+    }
+    public author getAuthor()
+    {
+        return author;
+    }
+    public String getTitle()
+    {
+        return title;
+    }
+    public boolean isFiction()
+    {
+        return fiction;
+    }
+    public void setAuthor(author author)
+    {
+        this.author = author;
+    }
+    public void setTitle(String title)
+    {
+        this.title = title;
+    }
+    public void setNoOfPages(int noOfPages)
+    {
+        this.noOfPages = noOfPages;
+    }
+    public void setFiction(boolean fiction)
+    {
+        this.fiction = fiction;
+    }
+    //@Override
+    public String toString()
+    {
+        return "Book{" + "author=" + author + ", title=" + title + ", noOfPages=" + noOfPages + ", fiction=" + fiction + '}';
+    }
+}
+class author
+{
+    private String name;
+    public author ()
+    {
+        
+    }
+    public author(String name)
+    {
+        this.name = name;
+    }
+    public String getName()
+    {
+        return name;
+    }
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+    public String toString()
+    {
+       return "author{" + "name=" + name + '}';
+    }
+}  
+class test31
+{
+    //int a =4;
+    //String str= "xin chao";
+    int a ;
+    public test31(int a)
+    {
+        this.a =a;
+    }
+    public int returrn()
+    {
+        return a;
+    }
+    private static String title;
+    public static void main(String args[])
+    {
+        Scanner input = new Scanner(System.in);
+        book book = new book();
+        //test31 obj = new test31(2022); //**
+        //System.out.println("gia tri cua obj la: "+new test31(2022));
+        //obj = "xin chao"; //=> kiểu dữ liệu của đối tượng chính do người dùng đặt mà mình thử hôm nay không phải là string bởi vì khi gán đối tượng chính ấy với chuỗi kí tự thì xuất hiện lỗi.
+        //Integer so = new Integer(32);
+        //String s = new String();
+        //s = so.toString();
+        //System.out.println("gia tri cua so.tostrong la: "+s);
+        //String s = new String("haha kho hieu that day");
+        //System.out.println("gia tri cua so.tostrong la: "+s.toString());
+        //int kp[] = new int[2];
+        //System.out.println("gia tri cua kp la "+kp);
+        //String quakhu = new String("xinchao");
+        //Integer obj2 = new Integer(4);
+        //System.out.println("gia tri cua obj2 la: "+obj2);
+        //System.out.println("gia tri cua new Integer(4) la: "+ new Integer(4));
+        //int coun = obj.str.length();f
+        //System.out.println("do dai cua obj.str la: "+coun);
+        //Integer soo = new Integer(23);
+        //System.out.println("gia tri cua soo la: "+soo);
+        //int sop = new Integer(23) +1;
+        //System.out.println("gia tri cua sop la: "+sop);
+        String authorname = input.nextLine();
+        author author = new author(authorname); ///***ddooi tuong chinh nay thi
+        //System.out.println("gia tri cua new author(authorname) la: "+  author); //new author(authorname)
+        book.setAuthor(author);
+        String bookname = input.nextLine();
+        book.setTitle(bookname);
+        int numberPages = input.nextInt();
+        book.setNoOfPages(numberPages);
+        boolean fiction = input.nextBoolean();
+        book.setFiction(fiction);
+        System.out.println(book);
+        ///System.out.println("gia tri cua book.a la: "+book.a); xay ra loi vi a ko phai la doi tuong phu trong lop test31   
+        //Integer obj2002 = new Integer(2002);
+        //int tong = obj2002 -2;
+        //System.out.println("gia tri cua tong la: "+tong);
+    }
+}

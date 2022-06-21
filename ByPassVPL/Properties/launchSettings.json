@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "ByPassVPL": {
+      "commandName": "Project",
+      "commandLineArgs": "-u anhddhe170896se1718su22 -p HE170896  -f in.txt -r Main.java -a http://drnguyentt.com/moodle30/mod/vpl/view.php?id=1260",
+      "nativeDebugging": false
+    }
+  }
+}
